@@ -40,7 +40,7 @@ export function Philosophy() {
         >
           {/* Decorative quotation mark */}
           <span className="block font-[family-name:var(--font-cormorant-garamond)] text-[#C4A35A] text-8xl md:text-9xl leading-none opacity-30 -mb-8 md:-mb-12">
-            "
+            &ldquo;
           </span>
 
           <p className="font-[family-name:var(--font-cormorant-garamond)] text-[#1A1A1A] text-3xl md:text-4xl lg:text-5xl font-light leading-[1.4] max-w-[22ch]">

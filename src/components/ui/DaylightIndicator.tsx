@@ -55,26 +55,16 @@ function formatTime(date: Date): string {
 }
 
 export function DaylightIndicator() {
-  const [sunTimes, setSunTimes] = useState<SunTimes | null>(null);
-  const [currentTime, setCurrentTime] = useState<Date | null>(null);
+  const [currentTime, setCurrentTime] = useState(() => new Date());
+  const sunTimes = calculateSunTimes(currentTime);
 
   useEffect(() => {
-    const now = new Date();
-    setSunTimes(calculateSunTimes(now));
-    setCurrentTime(now);
-
     const interval = setInterval(() => {
-      const now = new Date();
-      setSunTimes(calculateSunTimes(now));
-      setCurrentTime(now);
+      setCurrentTime(new Date());
     }, 60000);
 
     return () => clearInterval(interval);
   }, []);
-
-  if (!sunTimes || !currentTime) {
-    return null;
-  }
 
   const isDaylight =
     currentTime >= sunTimes.sunrise && currentTime <= sunTimes.sunset;

@@ -105,7 +105,7 @@ export default function BookingPage() {
                 </h4>
                 <p className="font-[family-name:var(--font-cormorant)] text-[#8B7355] text-base">
                   50% Anzahlung bei Buchung. Restzahlung vor Ort oder per
-                  Überweisung.
+                  Überweisung an Willie UG (haftungsbeschränkt).
                 </p>
               </div>
               <div>
